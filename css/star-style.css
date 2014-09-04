@@ -1,0 +1,117 @@
+div.star {
+	width: 466px;
+	height: 466px;
+	position: absolute;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.star-details {
+	position: absolute;
+	padding: 20px;
+	margin: 0;
+	top: 21px;
+	left: 21px;
+	width: 380px;
+	height: 380px;
+	visibility: hidden;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.star-details p {
+	text-align: justify;
+}
+
+.star-details h1 {
+	padding: 0; 
+	margin: 0;
+}
+
+div.star:hover {
+	z-index: 2;
+}
+
+div.star:hover .star-details {
+	background: #FFF;
+	visibility: visible;
+}
+
+div.star#star1 {
+	background: url(../img/simonwebbe.png) no-repeat;	
+	top: 5px;
+	left: 270px;
+	-webkit-transform-origin: 0px 0px;
+	   -moz-transform-origin: 0px 0px;
+	     -o-transform-origin: 0px 0px;
+  	        transform-origin: 0px 0px;
+	-webkit-transform: rotate(-10deg);
+	   -moz-transform: rotate(-10deg);
+	     -o-transform: rotate(-10deg);
+		    transform: rotate(-10deg);
+}
+
+div#star1:hover {
+	-webkit-transform-origin: 420px 420px;
+	   -moz-transform-origin: 420px 420px;
+	     -o-transform-origin: 420px 420px;
+  	        transform-origin: 420px 420px;
+	-webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+		    transform: rotate(0deg);
+}
+
+div.star#star2 {
+	background: url(../img/hardkaur.png) no-repeat;	
+	top: 30px;
+	left: 770px;
+	-webkit-transform-origin: 0px 0px;
+	   -moz-transform-origin: 0px 0px;
+	     -o-transform-origin: 0px 0px;
+  	        transform-origin: 0px 0px;
+	-webkit-transform: rotate(15deg);
+	   -moz-transform: rotate(15deg);
+	     -o-transform: rotate(15deg);
+		    transform: rotate(15deg);
+}
+
+div#star2:hover {
+	-webkit-transform-origin: 420px 420px;
+	   -moz-transform-origin: 420px 420px;
+	     -o-transform-origin: 420px 420px;
+  	        transform-origin: 420px 420px;
+
+	-webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+		    transform: rotate(0deg);
+}
+
+
+div.star#star3 {
+	background: url(../img/jal.png) no-repeat;	
+	top: 250px;
+	left: 200px;
+	-webkit-transform-origin: 420px 420px;
+	   -moz-transform-origin: 420px 420px;
+	     -o-transform-origin: 420px 420px;
+  	        transform-origin: 420px 420px;
+
+	-webkit-transform: rotate(-30deg);
+	   -moz-transform: rotate(-30deg);
+	     -o-transform: rotate(-30deg);
+		    transform: rotate(-30deg);
+
+}
+
+div#star3:hover {
+	-webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+		    transform: rotate(0deg);
+}

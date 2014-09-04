@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Srijan is the annual socio-cultural fest of Indian School of Mines, Dhanbad. The festival is not only a panorama of events to test the cultural and artistic skills of the youth from all over the country, but it also endeavours to bring together eminent artists as well as celebrities across the globe, all in an attempt to bestow a memorable and spellbinding experience.">
+<meta name="keywords" content="srijan, srijan 13, srijan badla, badla">
+<meta name="robots" content="index, follow">
+    <title>Srijan 13 | Badla</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+
+<link rel="icon" type="image/png" href="favico.png">
+<link rel="image_src" href="../favico.png" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+    <style>
+body {
+	background-color:#000;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+#controls{	
+	position: absolute;
+	bottom: 80px;
+	left: 30px;
+	float: left;
+	z-index: 2;
+}
+#list {
+	color: white;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	z-index: 2;
+	position: absolute;
+	bottom: 20px;
+	left: 10px;
+	width: 100%;
+}
+        
+#list li {
+	cursor: pointer;
+	display: inline-block;
+	padding-left: 30px;
+	z-index: 2;
+}
+
+#list li:hover {
+	text-decoration: underline;
+}
+
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+	height: 30px;
+	display: block;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track-piece  {
+	background-color: #3b3b3b;
+	-webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: #666;
+	border: 0px solid #eee;
+	-webkit-border-radius: 6px;
+}
+
+#about{
+	position: absolute;
+	font-size: 1.1em;
+	border: solid #000 0px;
+	background: #DDD;
+	color: #333;
+	left: 50%;
+	top: 50%;
+	margin: -200px -300px;
+	width: 600px;
+	height: 400px;
+	padding: 20px;
+	text-align: justify;
+	scrollbar-face-color: black;
+	scrollbar-base-color: black;
+	z-index: 4;
+	display: none;
+	overflow: auto;
+	border-radius: 5px;
+	border: 5px #999 solid;
+	text-shadow: 0px 1px 1px #FFF;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.x {
+	top: 0px;
+	float: right;
+	cursor: pointer;
+	font-size: 1.5em;
+}
+
+#layer_controls {
+       border: solid #0F3 0px;
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       height: 100%;
+       width: 100%;
+       z-index:3;
+       display: none;
+
+}
+
+#player_layer {
+	border: solid #0F3 0px;
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       height: 100%;
+       width: 100%;
+       z-index:1;
+
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38051251-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+ <div id="layer_controls"></div>
+ <div id="player_layer"></div>
+<iframe id="player" type="text/html" width="100%" height="100%"
+  src="http://www.youtube.com/embed/?listType=playlist&list=PLdFPq8ENlVwAVhzm7JP1U3rV88EEqc7m2&autoplay=1&controls=0&showinfo=0&rel=0&loop=1&enablejsapi=1&version=3" frameborder="0" style=" position: absolute; top: 0px; left: 0px; z-index: -22;" ></iframe>
+
+<script>
+
+if (!window['YT']) {var YT = {};}if (!YT.Player) {(function(){var s = 'http:' + '//s.ytimg.com/yts/jsbin/www-widgetapi-vflSBkLNo.js';var a = document.createElement('script');a.src = s;a.async = true;var b = document.getElementsByTagName('script')[0];b.parentNode.insertBefore(a, b);YT.embed_template = "\u003ciframe width=\"425\" height=\"344\" src=\"\" frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e";})();}
+
+ var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+
+                 });
+          }
+
+function onPlayerReady(event) {
+  event.target.setVolume(100);
+  event.target.playVideo();
+}
+
+
+</script>
+
+<ul id="list">
+    <li><span id="about_o">About the event</span></li>
+</ul>
+
+<div id="about">
+<span class="x">&times;</span>
+<h1>Badla</h1>
+<p>
+Welcome to the Badla portal.  <br>
+It's your time to 'ACT' and show your SR13AN fever.<br>
+<br>
+Step 1: Make a video(max upto 15 sec, and 25MB).
+A short intro and our official SR13AN motto: 
+<strong>Humari Zindagi ka ek hi Maksad hai..."SRIJAN" </strong>
+in your own ISHTYLE.
+<br>
+<br>
+Step 2: Send your videos to <code>badla@srijanism.org</code>, or mail us the YouTube link to your video.
+<br>
+<br>
+1st prize: Rs. 2500/- <br>
+2nd prize: Rs. 1500/- <br>
+3rd prize: Rs. 1000/- <br>
+</p>
+</div>
+
+<div id="controls">
+<!--<button onclick="javascript:player.playVideo()">Play</button>
+<button onclick="javascript:player.pauseVideo()">Pause</button>-->
+
+<a href="#" id="play"><img id="play" src="img/pause.png" /></a>
+<a href="#" id="mute"><img id="mute" src="img/unmute.png" /></a>
+<audio id="bgsound" loop>
+	<source src="gangs_of_wasseypur_1_2.mp3" type="audio/mp3">
+</audio>
+</div>
+
+<script type="text/javascript">
+var state;
+state=1;
+//player.setVolume(30);
+function change(){
+	if(state==1){
+		$("img#play").attr("src","img/play.png");
+		state=0;
+		player.pauseVideo();
+	}
+	else{
+		$("img#play").attr("src","img/pause.png");
+		state=1;
+		player.playVideo();
+	}
+}
+
+
+
+var statem;
+statem=1;
+function changem() {
+	if(state==1) {
+		$("img#mute").attr("src","img/mute.png");
+		state=0;
+		player.mute();
+		document.getElementById('bgsound').muted = true;
+	}
+	else {
+		$("img#mute").attr("src","img/unmute.png");
+		state=1;
+		player.unMute();
+		document.getElementById('bgsound').muted = false;
+	}
+}
+
+$(document).ready(function() {
+		$("#about_o").click(function(){
+			$("#about").slideToggle("slow");
+			$("#layer_controls").show();
+		});
+
+		$("a#play").click(function() {
+			change();
+		});
+		$("a#mute").click(function() {
+			changem();
+		});
+
+		$(".x").click(function(){
+			$("#about").hide();
+			$("#layer_controls").hide();	
+		});
+
+
+		bgs=document.getElementById("bgsound");
+		bgs.volume=0.2;
+		
+		setTimeout(function() {
+		  bgs.play();
+		}, 10000);
+});
+
+</script>
+</body>
+</html>

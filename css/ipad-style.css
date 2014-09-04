@@ -1,0 +1,186 @@
+.ipad {
+	width: 1000px;
+	height: 800px;
+	background: url(../img/ipad_menu.png) no-repeat;
+	position: relative;
+	top: -50px;
+}
+
+.ipad .ipad-list, .ipad .ipad-app {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	left: 1px;
+	top: 88px;
+	width: 811px;
+	height: 485px;
+	padding: 60px 0px;
+}
+.ipad .ipad-list {
+	background: url(../img/ipad-back.jpg) no-repeat;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	   -moz-transition: opacity 0.5s;
+	     -o-transition: opacity 0.5s;
+	        transition: opacity 0.5s;
+}
+
+.ipad-list li {
+	width: 21%;
+	height: 30%;
+	display: inline-block;
+	text-align: center;
+	-webkit-transition: opacity 0.5s;
+	   -moz-transition: opacity 0.5s;
+	     -o-transition: opacity 0.5s;
+	        transition: opacity 0.5s;
+}
+
+.ipad-list li a:hover img {
+	-webkit-transform: rotate(-5deg);
+	   -moz-transform: rotate(-5deg);
+	     -o-transform: rotate(-5deg);
+	        transform: rotate(-5deg);
+}
+
+.ipad-list li a img {
+	width: 0;
+	height: 0;
+	border: 0;
+	-webkit-transition: all 0.5s;
+	   -moz-transition: all 0.5s;
+	     -o-transition: all 0.5s;
+	        transition: all 0.5s;
+}
+.ipad-list li span {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 0.9em;
+	font-weight: bold;
+	display: block;
+	text-shadow: 0px 2px 2px #333;
+	line-height: 0.3;
+}
+
+.ipad-list .ipad-folder-contents {
+	width: 100%;
+	height: 0px;
+	display: block;
+	background: url(../img/ipad-folder-back.jpg) repeat-x;
+	border-left: 0px;
+	border-right: 0px;
+	overflow: hidden;
+	top: -30px;
+	position: relative;
+	-webkit-transition: height 0.5s;
+	   -moz-transition: height 0.5s;
+	     -o-transition: height 0.5s;
+	        transition: height 0.5s;
+
+}
+.ipad-list .ipad-folder-contents .ipad-folder-data {
+	padding: 20px 0px;
+	display: none;
+}
+.ipad-list .ipad-folder-contents .ipad-folder-data li {
+	opacity: 1 !important;
+}
+
+
+
+
+.ipad .ipad-app {
+	background: #FFF;
+	display: block;
+	opacity: 0;
+	padding: 0;
+	height: 605px;
+	-webkit-transition: opacity 0.5s;
+	   -moz-transition: opacity 0.5s;
+	     -o-transition: opacity 0.5s;
+	        transition: opacity 0.5s;
+}
+
+.ipad .ipad-app .event-container {
+	width: 811px;
+	height: 605px;
+}
+
+.ipad #ipad-button {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 26px;
+	top: 365px;
+	z-index: 100;
+	cursor: pointer;
+}
+
+.event-container .title-bar {
+	background: #FFFDB5;
+	width: 300px;
+	height: 605px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: -webkit-linear-gradient(top, rgba(255,253,181,1), rgba(255,255,255,1));
+	background-image:    -moz-linear-gradient(top, rgba(255,253,181,1), rgba(255,255,255,1));
+	background-image:     -ms-linear-gradient(top, rgba(255,253,181,1), rgba(255,255,255,1));
+	background-image:      -o-linear-gradient(top, rgba(255,253,181,1), rgba(255,255,255,1));
+}
+
+.event-container .title-bar img {
+	width: 250px;
+	height: 250px;
+	padding: 5px;
+	background: #FFF;
+	border: 1px #AAA solid;
+	position: absolute;
+	left: 100px;
+	top: 40%;
+}
+
+.event-container .title-bar h1 {
+	font-size: 3em;
+	color: #452D2C;
+	position: absolute;
+	padding: 0;
+	padding-right: 10px;
+	text-align: right;
+	right: 0;
+	bottom: 60%;
+}
+
+.event-container .summary {
+	width: 405px;
+	position: absolute;
+	left: 380px;
+	top: 0;
+	text-align: justify;
+	top: 20%;
+	vertical-align: center;
+	line-height: 1.5;
+}
+
+a.back-button {
+	border: 3px #8A6952 solid;
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	font-size: 3em;
+	border-radius: 50px;
+	color: #8A6952;
+	padding: 0;
+	margin: 0;
+	line-height: 40px;	
+}
+
+a.back-button:hover {
+	color: #C9BC9D;
+	border-color: #C9BC9D;
+	text-decoration: none;
+}

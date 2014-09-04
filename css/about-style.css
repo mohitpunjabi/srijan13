@@ -1,0 +1,59 @@
+.news-cutting {
+	background: url(../img/gray_paper.jpg);
+	padding: 20px;
+	width: 350px;
+	padding: 40px;
+	margin: 20px;
+	position: absolute;
+//	box-shadow: 0px 2px 4px #999;
+}
+
+.news-cutting h1 {
+	font-size: 7em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	line-height: 1;
+	padding: 2px;
+	margin: 2px;
+	text-align: center;
+}
+
+.news-cutting p {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	line-height: 1.3;
+	font-size: 1.1em;
+	text-align: justify;
+}
+
+.news-cutting#srijan {
+	top: 70px;
+	left: 130px;
+}
+
+.news-cutting#about-us {
+}
+
+.news-cutting#about-us h1 {
+	font-size: 2.2em;
+}
+.news-cutting#about-us p {
+	font-size: 1em;
+}
+.news-cutting#about-us {
+	top: -20px;
+	left: 600px;
+	width: 500px;
+}
+
+.news-cutting#social-role h1 {
+	font-size: 3em;
+	padding: 0;
+}
+
+.news-cutting#social-role {
+	left: -20px;
+	width: 750px;
+}
+.object#social-article {
+	-webkit-transform: rotate(20deg);
+}

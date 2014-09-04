@@ -1,0 +1,245 @@
+<html>
+<head>
+<script type=text/javascript src=js/jquery.js></script>
+
+<script type=text/javascript>
+var total_images;
+var width;
+var height;
+var pointsX;
+var pointsY;
+var rotateDeg;
+var order;
+var img_height = 200;
+var img_width = 300;
+var maximumRotationAngle = 30;
+var titleIndex;
+
+$(document).ready(function()
+{
+ titleIndex = parseInt($(".polaroid_scatter li[type=title]").index());
+ var title = $(".polaroid_scatter li:eq(" + titleIndex + ")").html();
+ $(".polaroid_scatter li:eq(" + titleIndex + ")").html("<H1 class=gallery_title>" + title + "</H1>");
+ $(".polaroid_scatter li:eq(" + titleIndex + ") h1.gallery_title").wrap("<DIV class=title_wrapper></DIV>");
+ $(".title_wrapper").append("<DiV class=handle1></DIV><DiV class=handle2></DIV>");
+
+ total_images = $(".polaroid_scatter li:last").index() + 1;
+ pointsX = new Array(total_images);
+ pointsY = new Array(total_images);
+ rotateDeg = new Array(total_images);
+ order = new Array(total_images);
+
+ $(".polaroid_scatter li img").wrap("<div class=polaroid_wrapper></div>");
+
+
+ for(i=0; i<total_images;i++)
+ {
+  var ttl = $(".polaroid_scatter li:eq(" + i + ") img").attr("title");
+  $("ul.polaroid_scatter li:eq(" + i + ") div.polaroid_wrapper").append("<div class=image_title><font face=\"Arial,Helvetica,Sans Serif\" size=3>" + ttl + "</font></div>");
+ }
+
+ width =  parseInt($(".polaroid_scatter").css("width"));
+ height =  parseInt($(".polaroid_scatter").css("height"));
+ $(".polaroid_scatter li img").css("height", img_height);
+ $(".polaroid_scatter li img").css("width", img_width);
+
+ arrangeInGrid();
+});
+
+function setPoints()
+{
+ for(i=0;i<total_images;i++)
+ {
+  var pow = Math.pow(-1, Math.floor(2*Math.random()));
+  var c = maximumRotationAngle*pow*Math.random();
+  rotateDeg[i] = c;
+  var d = parseInt((total_images)*Math.random());
+  var invalid = false;
+
+  do
+  {
+   invalid = false;
+   for(k=0;k<i;k++)
+   {
+    if(order[k] == d)
+    {
+     invalid = true;
+     d = parseInt((total_images)*Math.random());
+    }
+   }
+  }while(invalid);
+
+  order[i] = d;
+ }
+}
+
+function arrange()
+{
+ for(i=0;i<total_images;i++)
+ {
+  $(".polaroid_scatter li:eq(" + order[i] + ")").css("left", "" + (pointsX[i]-150) + "px");
+  $(".polaroid_scatter li:eq(" + order[i] + ")").css("top", "" + (pointsY[i]-(img_height/2)) + "px");
+  $(".polaroid_scatter li:eq(" + order[i] + ")").css("-moz-transform", "rotate(" + rotateDeg[i] + "deg)");
+  $(".polaroid_scatter li:eq(" + order[i] + ")").css("-webkit-transform", "rotate(" + rotateDeg[i] + "deg)");
+  $(".polaroid_scatter li:eq(" + order[i] + ")").css("-o-transform", "rotate(" + rotateDeg[i] + "deg)");
+  $(".polaroid_scatter li:eq(" + order[i] + ")").css("transform", "rotate(" + rotateDeg[i] + "deg)");
+ }
+}
+
+function arrangeInGrid()
+{
+ setPoints();
+ makeSureTitleOnTop();
+ var no = parseInt((width - (img_width/2))/(img_width-30));
+ var rowno = parseInt((total_images - 1)/no);
+ var th = (img_height + 20)*(rowno+1);
+ $("ul.polaroid_scatter").css("height", th + "px");
+ for(j=0;j<total_images;j++)
+ {
+  var row = parseInt(j/no);
+  pointsX[j] = (img_width/2) + 30 + ((j%no)*img_width);
+  pointsY[j] = (img_height/2) + 30 + (row*img_height);
+ }
+ arrange();
+}
+
+function makeSureTitleOnTop()
+{
+ var cols = parseInt((width - (img_width/2))/(img_width-30));
+ var ti = parseInt(cols*Math.random());
+
+ var to = 0;
+
+ for(i=0; i<total_images;i++)
+ {
+  if(order[i] == titleIndex)
+   to = i;
+ }
+
+ var buff = order[to];
+ order[to] = order[ti];
+ order[ti] = buff;
+}
+</script>
+
+<style type=text/css>
+body
+{
+ background: url('img/wood_pattern.png');
+}
+
+ul.polaroid_scatter
+{
+ display: block;
+ position: relative;
+ list-style-type: none;
+ width: 95%;
+// height: 100%;
+}
+
+ul.polaroid_scatter li
+{
+ display: inline;
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ -moz-transition: left 2s, top 2s, -moz-transform 2s;
+ -webkit-transition: left 2s, top 2s, -webkit-transform 2s;
+ -o-transition: left 2s, top 2s, -o-transform 2s;
+ transition: left 2s, top 2s, transform 2s;
+ align: center;
+}
+
+ul.polaroid_scatter li img
+{
+ display: block;
+}
+
+div.polaroid_wrapper
+{
+ padding: 10px;
+ padding-bottom: 40px;
+ background-color: #eee;
+ border: 2px solid #000;
+ border-radius: 5px;
+ text-align: center;
+}
+
+.image_title
+{
+ display: block;
+ position: relative;
+ top: 20px;
+}
+
+ul.polaroid_scatter li:hover
+{
+ z-index: 100;
+}
+
+.gallery_title
+{
+ font-family: Arial, Helvatica, Sans-serif;
+ font-size: 60px;
+ color: rgb(50, 50, 250);
+ text-shadow: 0px 0px 3px rgb(50, 50, 250);
+ display: inline;
+ z-index: 99;
+}
+
+.title_wrapper
+{
+ background-color: #fff;
+ border: 5px solid #000;
+ border-radius:5000px;
+ display: block;
+ z-index: 99;
+ text-align: center;
+ padding: 20px;
+ position: relative;
+}
+
+.handle1
+{
+ position: absolute;
+ width: 5px;
+ height: 200px;
+ left: 20%;
+ bottom: 100%;
+ background-color: #fff;
+ border: 5px solid #000;
+ border-bottom: 0px;
+}
+
+.handle2
+{
+ position: absolute;
+ width: 5px;
+ height: 200px;
+ right: 20%;
+ bottom: 100%;
+ background-color: #fff;
+ border: 5px solid #000;
+ border-bottom: 0px;
+}
+</style>
+
+</head>
+
+
+
+<body leftmargin=0 topmargin=0>
+<ul class=polaroid_scatter>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+ <li><img src=img/santa.jpg>
+
+</ul>
+</body>
+
+</html>

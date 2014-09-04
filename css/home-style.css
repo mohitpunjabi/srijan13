@@ -1,0 +1,66 @@
+ul.social-buttons {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	margin: 0;
+	padding: 7px;
+	list-style: none;
+	z-index: 3;
+}
+
+ul.social-buttons li {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	margin: 0px 0px;
+}
+
+ul.social-buttons li img {
+	border: 0;
+}
+
+div.srijan-logo {
+	position: relative;
+	top: 250px;
+	padding: -50px;
+	text-align: center;
+}
+
+div#updates {
+	background: url(../img/note.png) no-repeat;
+	width: 285px;
+	height: 485px;
+	position: absolute;
+	right: 50px;
+	top: 30px;
+}
+
+div#updates div#tweet-app {
+	width: 201px;
+	height: 341px;
+	left: 25px;
+	top: 64px;
+	position: absolute;
+	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 10px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+	height: 30px;
+	display: block;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track-piece  {
+	background-color: #3b3b3b;
+	-webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: #666;
+	border: 0px solid #eee;
+	-webkit-border-radius: 6px;
+}

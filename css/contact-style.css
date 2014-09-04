@@ -1,0 +1,50 @@
+.contact-list {
+	width: 700px;
+	height: 750px;
+	left: 400px;
+	position: absolute;
+	text-align: center;
+	background: #FFFFEC;
+//	box-shadow: 0px 4px 4px #000;
+	margin: 0;
+	overflow: auto;
+}
+
+.contact-list h1 {
+	font-size: 3em;
+	color: #452D2C;
+}
+
+.contact-list h3 {
+	display: block;
+	width: 100%;
+	border-bottom: 1px #C9BC9D solid;
+	padding-bottom: 5px;
+	color: #8A6952;
+}
+
+
+#contact {
+	padding-bottom: 200px;
+}
+
+#contact ul {
+	margin: 0;
+	list-style: 0;
+	padding: 0;
+}
+
+#contact ul li {
+	display: inline-table;
+	padding: 5px 10px;
+	font-size: 0.8em;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: underline;
+}

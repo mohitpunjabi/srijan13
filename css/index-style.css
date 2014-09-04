@@ -1,0 +1,197 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Slab', serif;
+
+	/*overflow:hidden;*/
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+}
+
+.background-show {
+	width: 100%;
+	height: 100%;
+	position: inherit;
+	background-color: #000;
+	min-width: 800px;
+	overflow: hidden;
+}
+
+.navbar {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	border: 0;
+	padding: 10px;
+	margin: 0;
+	list-style-type: none;
+	color: #FFF;
+	font-size: 30px;
+}
+
+.navbar li {
+	float: left;
+	width: 16%;
+	text-align: center;
+	cursor: pointer;
+	-webkit-transition: all 0.5s;
+	   -moz-transition: all 0.5s;
+	     -o-transition: all 0.5s;
+	        transition: all 0.5s;
+}
+.navbar li:hover {
+	-webkit-transform: scale(2.5, 2.5);
+	   -moz-transform: scale(2.5, 2.5);
+	     -o-transform: scale(2.5, 2.5);
+	        transform: scale(2.5, 2.5);
+}
+
+.navbar a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.logo {
+	position: absolute;
+	left: 20px;
+	top: 60px;
+	width: 400px;
+	height: 305px;
+	background: url(../img/srijan13_logo.png) no-repeat;
+}
+
+#counter {
+	color: #FFF;
+	font-size: 90px;
+	position: absolute;
+	top: 40%;
+	font-family: 'ChunkFiveRegular', sans-serif;
+}
+::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+height: 30px;
+display: block;
+background-color: transparent;
+}
+::-webkit-scrollbar-track-piece  {
+background-color: #3b3b3b;
+-webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical {
+height: 50px;
+background-color: #666;
+border: 0px solid #eee;
+-webkit-border-radius: 6px;
+}
+
+#counter, #srijan, #ism, #contact, #events, #past {
+	max-width: 750px;
+	min-width: 700px;
+	left : 40%;
+	scrollbar-face-color: black;
+	scrollbar-base-color: black;
+	
+	overflow-y:auto; border: #fff 0px solid; 
+	max-height:60%; min-height:50%;
+	-webkit-transition: top 0.5s;
+	   -moz-transition: top 0.5s;
+	     -o-transition: top 0.5s;
+	        transition: top 0.5s;
+}
+
+#srijan, #ism, #contact, #events, #past {
+	position: absolute;
+	top: 102%;
+	color: #FFF;
+	font-size: 20px;
+	text-align: justify;
+	padding: 20px;
+	overflow:auto;	
+}
+
+
+
+h1 { 
+	font-family: 'ChunkFiveRegular';
+	line-height: 1;
+	padding: 5px;
+	font-weight: 100;
+	font-size: 60px;
+}
+h2{
+	
+	display: block;
+	
+}
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../font/Chunkfive-webfont.eot');
+    src: url('../font/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Chunkfive-webfont.woff') format('woff'),
+         url('../font/Chunkfive-webfont.ttf') format('truetype'),
+         url('../font/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#facebook{
+	position:absolute;
+	top:75%;
+	left:20px;;
+}
+
+#twitter{
+	position: absolute;
+	top: 10%;
+	left: 80%;
+	color:#fff;
+	
+}
+
+.contact{
+	float:left;
+	padding-right: 10%;
+	padding-top: 15px;
+	padding-bottom:15px;
+}
+#home, #about-srijan, #about-ism, #event, #contact-us, #past-sponsers{
+	font-size:18px;
+}
+/*#counter{
+	text-shadow: 20px 20px #333333;
+}
+.row{
+	position:absolute;
+	top:93%;
+	left:30%;
+	padding:15px;
+	display: inline-block;
+	width:100%;
+	color:#fff;
+	font-size:20px;
+	font-weight:1000;
+}
+
+a.wm:link {color: #FFF;text-decoration:none;}
+a.wm:visited {color: #FFF;text-decoration:none;}
+a.wm:hover {text-decoration:underline;}
+*/
+
+#youtube{
+	position:absolute;
+	top: 10%;
+	left:70%;
+	padding-right: 10px;
+	
+}
