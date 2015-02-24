@@ -6,5 +6,5 @@ The concept was the show the whole website as a (cluttered) desk.
 
 A working example
 -----------
-[Visit this page](http://mohitpunjabi/srijan13) to see a working example.
+[Visit this page](http://mohitpunjabi.com/srijan13) to see a working example.
 
